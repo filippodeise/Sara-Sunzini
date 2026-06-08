@@ -272,6 +272,28 @@ section{scroll-margin-top:90px}
 .media-mention .mm-arrow{flex:none;width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:800;transition:.25s}
 .media-mention:hover .mm-arrow{background:var(--blue-deep);transform:translateX(2px)}
 
+/* Melinda recognition */
+.melinda{display:flex;align-items:center;gap:20px;background:linear-gradient(120deg,#FFF8E6,#FFFDF7);border:2px solid var(--yellow);border-radius:var(--r);padding:22px 26px;margin:0 auto 36px;max-width:880px;box-shadow:var(--shadow-sm)}
+.melinda .apple{font-size:2.6rem;flex:none;line-height:1}
+.melinda .mtxt{flex:1}
+.melinda .mtxt .tag{font-size:.74rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow-deep)}
+.melinda .mtxt b{display:block;font-family:var(--display);font-weight:600;color:var(--navy);font-size:1.12rem;line-height:1.25;margin-top:4px}
+.melinda .mlink{flex:none;display:inline-flex;align-items:center;gap:7px;font-weight:800;font-size:.9rem;color:var(--blue-deep);white-space:nowrap}
+.melinda .mlink:hover{color:var(--blue)}
+/* press / risorse cards */
+.press{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:30px 0 8px}
+.press-card{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:24px 22px;box-shadow:var(--shadow-sm);transition:.3s}
+.press-card.live:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:var(--blue)}
+.press-card .pc-ic{font-size:1.8rem;margin-bottom:12px}
+.press-card .pc-tag{font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
+.press-card h4{font-size:1.08rem;margin:7px 0 14px;flex:1}
+.press-card .pc-go{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:.9rem;color:var(--blue-deep)}
+.press-card.soon{background:var(--sky);border-style:dashed;border-color:var(--blue)}
+.press-card .pc-soon{display:inline-flex;align-items:center;gap:7px;font-weight:800;font-size:.86rem;color:var(--blue-deep);background:var(--white);border-radius:100px;padding:8px 14px;align-self:flex-start}
+.reviews-link{display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:.95rem;color:var(--blue-deep);background:var(--white);border:1px solid var(--line);border-radius:100px;padding:11px 22px;box-shadow:var(--shadow-sm);transition:.25s;margin-top:6px}
+.reviews-link:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--blue)}
+.reviews-link .gstars{color:var(--yellow);letter-spacing:1px}
+
 /* ===== REVEAL ===== */
 .reveal{opacity:0;transform:translateY(34px);transition:opacity .7s ease, transform .7s ease}
 .reveal.in{opacity:1;transform:none}
@@ -289,6 +311,8 @@ section{scroll-margin-top:90px}
   .hero{padding:120px 0 56px}
   .pcards,.steps,.tcards{grid-template-columns:1fr}
   .auth-gallery{grid-template-columns:1fr}
+  .press{grid-template-columns:1fr}
+  .melinda{flex-direction:column;text-align:center}
   .media-mention{flex-direction:row;flex-wrap:wrap}
   .drama{grid-template-columns:1fr}
   .drama .vs{padding:14px;font-size:1rem}
@@ -544,7 +568,10 @@ section{scroll-margin-top:90px}
         <div class="who"><div class="av">C</div><div class="info"><b>Studentessa universitaria</b><span>Fuori sede · percorso a distanza</span></div></div>
       </div>
     </div>
-    <p class="tnote reveal">Casi rappresentativi del lavoro quotidiano della Dott.ssa Sunzini. Le recensioni reali delle pazienti verranno pubblicate qui.</p>
+    <p class="tnote reveal">Casi rappresentativi del lavoro quotidiano della Dott.ssa Sunzini. Le recensioni verificate delle pazienti le trovi su Google.</p>
+    <div class="center reveal" style="margin-top:6px">
+      <a class="reviews-link" href="https://share.google/jyHuErpxGOmSAszcD" target="_blank" rel="noopener"><span class="gstars">★★★★★</span> Leggi le recensioni su Google →</a>
+    </div>
     <div class="cta-row reveal">
       <a href="#contatti" class="btn btn-blue btn-lg">Voglio la mia storia serena</a>
     </div>
@@ -559,6 +586,15 @@ section{scroll-margin-top:90px}
       <h2 class="sec-title reveal d1">Una professionista vera, che puoi verificare</h2>
       <p class="sec-lead reveal d2">Cinque anni di pratica, una formazione solida e uno studio reale a Campobasso. Dietro lo schermo c'è una biologa nutrizionista con le carte in regola.</p>
     </div>
+
+    <a class="melinda reveal" href="https://www.ilnutrizionistadeibambini.it/" target="_blank" rel="noopener">
+      <span class="apple">🍎</span>
+      <span class="mtxt">
+        <span class="tag">Riconoscimento Melinda</span>
+        <b>Unica nutrizionista pediatrica del Molise nel progetto «Il Nutrizionista dei Bambini»</b>
+      </span>
+      <span class="mlink">Scopri di più →</span>
+    </a>
 
     <div class="auth-gallery">
       <div class="auth-card reveal d1">
@@ -582,12 +618,26 @@ section{scroll-margin-top:90px}
       <span class="cred"><span class="ic">🤝</span> Rete con pediatri, psicologhe e ostetriche</span>
     </div>
 
-    <div class="center reveal d2">
-      <a class="media-mention" href="https://medicina365.it/2023/02/10/dott-sara-sunzini-il-ruolo-del-nutrizionista-nel-2023/" target="_blank" rel="noopener">
-        <span class="mm-tag">📰 Intervista</span>
-        <span class="mm-txt">«Il ruolo del nutrizionista nel 2023» — leggi su <b>Medicina365</b></span>
-        <span class="mm-arrow">→</span>
+    <div class="press">
+      <a class="press-card live reveal d1" href="https://medicina365.it/2023/02/10/dott-sara-sunzini-il-ruolo-del-nutrizionista-nel-2023/" target="_blank" rel="noopener">
+        <span class="pc-ic">📰</span>
+        <span class="pc-tag">Sulla stampa</span>
+        <h4>«Il ruolo del nutrizionista nel 2023»</h4>
+        <span class="pc-go">Leggi su Medicina365 →</span>
       </a>
+      <a class="press-card live reveal d2" href="https://www.facebook.com/reel/235201575772521/" target="_blank" rel="noopener">
+        <span class="pc-ic">🎙️</span>
+        <span class="pc-tag">In radio</span>
+        <h4>L'intervista radiofonica sullo svezzamento</h4>
+        <span class="pc-go">Guarda l'intervista →</span>
+      </a>
+      <!-- LIBRO: inserire qui il link Amazon quando disponibile (atteso settembre 2026) -->
+      <div class="press-card soon reveal d3">
+        <span class="pc-ic">📖</span>
+        <span class="pc-tag">In arrivo</span>
+        <h4>Il mio libro sullo svezzamento</h4>
+        <span class="pc-soon">🛒 Presto su Amazon · Settembre 2026</span>
+      </div>
     </div>
 
     <div class="cta-row reveal">
@@ -623,7 +673,7 @@ section{scroll-margin-top:90px}
       </div>
       <div class="qa reveal d1">
         <div class="q"><span>Da quando si può iniziare? E quanto ci vuole per vedere un cambiamento?</span><span class="ic">+</span></div>
-        <div class="a"><div class="a-in">Si può iniziare ancora prima dello svezzamento — anzi, fin dai primi mesi è il momento ideale per impostare un buon rapporto con il cibo. Molti genitori notano i primi cambiamenti già nelle prime settimane: pasti più sereni e meno tensione a tavola. Seguo anche adolescenti, adulti e mamme dopo la gravidanza, con lo stesso approccio sereno.</div></div>
+        <div class="a"><div class="a-in">Da quando il pediatra dice che il bambino è pronto per lo svezzamento. Infatti, fin dai primi mesi — già durante l'allattamento — si può lavorare sul <em>rapporto</em> con il cibo: imparare a riconoscere i segnali di fame e sazietà del bambino. L'introduzione degli alimenti, invece, avviene solo quando è il pediatra a dare il via libera. Molti genitori notano i primi cambiamenti già nelle prime settimane: pasti più sereni e meno tensione a tavola. Seguo anche adolescenti, adulti e mamme dopo la gravidanza, con lo stesso approccio sereno.</div></div>
       </div>
     </div>
     <div class="cta-row reveal">
